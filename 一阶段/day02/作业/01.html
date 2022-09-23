@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #e5e5e5;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: red;
+        }
+
+        .header .navbar {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            background-color: #f5c2cb;
+        }
+
+        /* 选择双数的navbar标签 */
+        .header .navbar:nth-child(2n) {
+            background-color: #377e21;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-color: #98352f;
+        }
+
+        .news {
+            width: 100%;
+            height: 240px;
+
+            /*
+                padding
+                    两个值的情况下 第一个值是上下内边距 第二个值是左右内边距
+            */
+
+            padding: 10px 0;
+            background-color: #7f32da;
+        }
+
+        .news .news-item {
+            /*width: calc(25% - 10px);*/
+            width: 242.5px;
+            height: 220px;
+            background-color: #f2a93b;
+            float: left;
+            margin-right: 10px;
+
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .news .news-item:last-child {
+            margin-right: 0;
+            /*margin-right: 0;*/
+        }
+
+        .content {
+            height: 300px;
+            background-color: blue;
+        }
+
+        .content .content-left,
+        .content .content-right {
+            width: 50%;
+
+            /* 继承父级的高度 */
+            height: inherit;
+            float: left;
+        }
+
+        /*.content .content-left {*/
+        /*    background-color: red;*/
+        /*}*/
+
+        /*.content .content-right {*/
+        /*    background-color: violet;*/
+        /*}*/
+
+        .content-left .content-left__box,
+        .content-right .content-right__box {
+            width: 90%;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #97eec8;
+        }
+
+        .content-right .content-right__box {
+            background-color: violet;
+        }
+
+        .content-right__box .item {
+            width: 48%;
+            height: 140px;
+            background-color: green;
+            float: left;
+        }
+
+        .content-right__box .item:nth-child(2n) {
+            float: right;
+        }
+
+        .item3, .item4 {
+            margin-top: 20px;
+        }
+
+        .content2 {
+            width: 100%;
+            height: 260px;
+            background-color: gold;
+        }
+
+        .content2-left {
+            width: 15%;
+            height: inherit;
+            float: left;
+        }
+
+        .content2-left-item:first-child{
+            width: 100%;
+            height: 70%;
+            background-color: pink;
+        }
+
+
+        .content2-left-item:last-child{
+            width: 100%;
+            height: 30%;
+            background-color: #56bcf9;
+        }
+
+        .content2-right {
+            width: 85%;
+            height: inherit;
+            float: left;
+            background-color: #a4cb4f;
+        }
+
+        .content2-right-item {
+            width: 197.5px;
+            height: 120px;
+            background-color: red;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .content2-right-item:nth-child(2n) {
+            background-color: #bceced;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+        .clearMarginRight {
+            margin-right: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header">
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+        <div class="navbar">首页</div>
+    </div>
+
+    <div class="banner"></div>
+
+    <div class="news">
+        <div class="news-item">1</div>
+        <div class="news-item">2</div>
+        <div class="news-item">3</div>
+        <div class="news-item">4</div>
+    </div>
+
+    <div class="content">
+        <div class="content-left">
+            <div class="content-left__box">
+                12
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="content-right__box">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item item3">3</div>
+                <div class="item item4">4</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content2">
+        <div class="content2-left">
+            <div class="content2-left-item">1</div>
+            <div class="content2-left-item">2</div>
+        </div>
+        <div class="content2-right">
+            <div class="content2-right-item">1</div>
+            <div class="content2-right-item">2</div>
+            <div class="content2-right-item">3</div>
+            <div class="content2-right-item clearMarginRight">4</div>
+            <div class="content2-right-item mt20">5</div>
+            <div class="content2-right-item mt20">6</div>
+            <div class="content2-right-item mt20">7</div>
+            <div class="content2-right-item mt20 clearMarginRight">8</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
