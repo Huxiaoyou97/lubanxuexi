@@ -1,13 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
+<!-- 书写css样式 -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 100px;
+    }
+
+    ul {
+        width: 300px;
+        height: 300px;
+        /*background-color: #ff0000;*/
+        /*background-color: rgb(255, 0, 0);*/
+        background-color: rgba(255, 0, 0, .5);
+    }
+
+    ul li {
+        /*去掉列表前面的小黑点或者数字*/
+        list-style: none;
+
+        text-align: center;
+
+    }
+
+    ul li a {
+        color: yellow;
+
+        /*
+          text-decoration
+
+            none 去除下划线
+            underline 添加下划线
+            overline 添加上划线 仅做了解
+            line-through 中划线
+          */
+        text-decoration: line-through;
+    }
+
+    .p1 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        color: white;
+
+        /*
+         文本居中方式
+            left 左对齐
+            center 居中对齐
+            right 右对齐
+            justify 两端对齐
+
+         */
+        text-align: justify;
+
+        /* 行高 */
+        /*line-height: 200px;*/
+    }
+</style>
 <body>
-	<h1>123</h1>
+<p class="p1">我是文字我是文字我是文字我是文字我是文字</p>
+
+<ul class="ul1">
+    <li>
+        <a href="#">我是第一行文本</a>
+    </li>
+    <li>
+        <a href="#">我是第二行文本</a>
+    </li>
+    <li>
+        <a href="#">我是第三行文本</a>
+    </li>
+    <li>
+        <a href="#">我是第四行文本</a>
+    </li>
+</ul>
+
+<div class="box2">首页</div>
+
 </body>
 </html>

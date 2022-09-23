@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .boss {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        float: left;
+
+        /* 透明度 0 - 1 */
+        opacity: .7;
+    }
+
+    .a1 {
+        width: 500px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
+<body>
+<!--
+    浮动  float:none/left/right;
+    左浮动  float:left;
+    右浮动  float:right;
+    特点：给元素添加浮动之后，元素就飘了，就不要自己的位置了，如果下方有内容，会跑过去占位置，但是只是身体占位置，内容不占位
+    作用：实现竖着的元素横着排列
+    -->
+<div class="boss">
+    <div class="box1">盒子1</div>
+    <div class="box2">盒子2</div>
+    <div class="box3">盒子3</div>
+</div>
+
+<div class="a1">我是下方的内容区</div>
+</body>
+</html>
