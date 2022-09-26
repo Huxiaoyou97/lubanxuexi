@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 有效范围 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 100%;
+}
+
+.box .header {
+    width: 100%;
+    height: 84px;
+    border-bottom: 2px solid #cd2f18;
+}
+
+.box .header .header-w {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 310px;
+    height: 60px;
+}
+
+.dianhua {
+    width: 162px;
+    height: 28px;
+    margin-right: 46px;
+}
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 52px;
+}
+
+.navbar li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar li a {
+    color: #333;
+}
+
+.navbar li a:hover {
+    color: #c92007;
+}
