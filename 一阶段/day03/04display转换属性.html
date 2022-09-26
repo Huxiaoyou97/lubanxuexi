@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--
+		1.display:block;  转为块元素
+		2.display:inline; 转为行内元素
+		3.display:inline-block; 转为行内块元素
+		4.display:none;  彻底消失
+		-->
+    <style>
+
+        li {
+            list-style: none;
+        }
+
+        p {
+            /* 设置该属性后 元素不会进行占位 但是会进行渲染 */
+            /*display: none;*/
+
+            /* 和上面的区别就是 这个会占位置 只是看不见 透明度为0 */
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <p>0</p>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>

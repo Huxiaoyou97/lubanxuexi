@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            list-style: none;
+            overflow: hidden;
+            border-bottom: 8px solid #dc4c17;
+            padding-left: 10px;
+        }
+
+        .nav li {
+            width: 80px;
+            height: 20px;
+            background: #dfdfdf;
+            font-size: 12px;
+            float: left;
+            margin-right: 1px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .nav li a {
+            text-decoration: none;
+            color: #646464;
+
+            /* 想要对行内元素设置宽高 必须转成块级元素 */
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .zhongwen {
+            display: none;
+        }
+
+        .nav li a:hover {
+            background: #dc4c17;
+            color: white;
+        }
+
+        .nav li a:hover .yingwen {
+            display: none;
+        }
+
+        .nav li a:hover .zhongwen {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li>
+        <a href="#">
+            <span class="yingwen">Home</span>
+            <span class="zhongwen">首页</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="yingwen">Home</span>
+            <span class="zhongwen">首页</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="yingwen">Home</span>
+            <span class="zhongwen">首页</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="yingwen">Home</span>
+            <span class="zhongwen">首页</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="yingwen">Home</span>
+            <span class="zhongwen">首页</span>
+        </a>
+    </li>
+</ul>
+</body>
+</html>

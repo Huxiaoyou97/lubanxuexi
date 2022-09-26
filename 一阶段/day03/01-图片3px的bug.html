@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid red;
+
+            /* 解决方案三 不推荐使用 */
+            /*font-size: 0;*/
+        }
+
+        img {
+            /* 默认情况下 img底部会有3px的间隙 使用此属性可以去掉间隙 */
+
+            /* 解决方案一 最好使用这个 */
+            /*vertical-align: middle;*/
+
+            /* 解决方案二 */
+            /*display: block;*/
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="./image/qf_42.jpg" alt="">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .navbar {
+            /* 清除浮动 防止父元素塌陷 */
+            overflow: hidden;
+            list-style-type: none;
+        }
+
+        li {
+            float: left;
+
+            width: 92px;
+            height: 92px;
+            text-align: center;
+            line-height: 92px;
+            margin-right: 10px;
+        }
+
+        li a img {
+            vertical-align: middle;
+        }
+
+        li:hover {
+            /*background-image: url("./image/bg1.png");*/
+            /*background-size: cover;*/
+
+            /* 缩写 背景图  no-repeat 不重复 */
+            background: url("./image/bg1.png") no-repeat;
+
+        }
+
+
+        .content {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .content .body {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .content:hover .body {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+		图片导航实现思路：
+		1.先完成基本的页面布局（基本结构，就是书写html标签）
+		2.书写css,页面Css初始化；
+		3.给li标签添加大小和背景色；
+		4.让竖着的li横着排列，给li添加浮动，且给ul添加高度或者overflow:hidden;
+		*5.给li添加text-align:center；实现图片水平居中；
+		*6.给li添加line-height,且给图片本身添加vertical-align:middle;实现垂直居中效果；
+		7.鼠标滑过li添加背景图；
+
+		-->
+<ul class="navbar">
+    <li><a href="#"><img src="./image/logo1.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo2.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo3.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo4.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo5.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo6.png" alt=""></a></li>
+    <li><a href="#"><img src="./image/logo7.png" alt=""></a></li>
+</ul>
+
+
+<div class="content">
+    <div class="body"></div>
+</div>
+</body>
+</html>
