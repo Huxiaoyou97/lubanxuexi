@@ -30,12 +30,29 @@
         .nav li a {
             text-decoration: none;
             color: #646464;
+
+            /* 想要对行内元素设置宽高 必须转成块级元素 */
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         .zhongwen {
             display: none;
         }
 
+        .nav li a:hover {
+            background: #dc4c17;
+            color: white;
+        }
+
+        .nav li a:hover .yingwen {
+            display: none;
+        }
+
+        .nav li a:hover .zhongwen {
+            display: block;
+        }
     </style>
 </head>
 <body>
