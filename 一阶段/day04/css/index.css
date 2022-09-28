@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 以上是初始化页面样式 */
+
+.header {
+    width: 100%;
+    height: 84px;
+    border-bottom: 2px solid #c92007;
+}
+
+.header-w {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 310px;
+    height: 60px;
+    margin-right: 50px;
+}
+
+.navbar {
+    display: flex;
+    flex: 1;
+}
+
+.navbar li {
+    /*flex: 1;*/
+    width: 86px;
+    text-align: center;
+}
+
+.navbar li a {
+    color: #333;
+}
+
+.navbar li a:hover {
+    color: #c92007;
+}
+
+.navbar li:nth-child(1) {
+    width: 64px;
+}
+
+.navbar li:nth-child(6) {
+    width: 74px;
+}
+
+.dianhua {
+    width: 162px;
+    height: 28px;
+    margin-right: 46px;
+    margin-left: 52px;
+}
+
+
+/* banner */
+.banner {
+    width: 100%;
+    height: 368px;
+
+    /* 定位参照物 */
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.banner img {
+    width: 100%;
+    height: inherit;
+}
+
+.banner .title {
+    /* 绝对定位 */
+    position: absolute;
+
+    top: 110px;
+    color: white;
+    font-size: 56px;
+
+    /* 调整字体间距 */
+    letter-spacing: 20px;
+
+    /* 字体加粗 */
+    font-weight: bold;
+}
+
+.banner .subTitle {
+    position: absolute;
+    top: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 30px;
+    margin-left: 10px;
+}
+
+/* container */
+.container {
+    margin-top: 56px;
+}
+
+.tabbar {
+    width: 996px;
+    height: 48px;
+    margin: 0 auto;
+    border: 1px solid #C92007;
+    color: #333;
+
+    display: flex;
+}
+
+.tabbar li {
+    flex: 1;
+    text-align: center;
+    line-height: 48px;
+    border-right: 1px solid #C92007;
+    cursor: pointer;
+}
+
+.tabbar li:last-child {
+    border: none;
+}
+
+.tabbar .active,
+.tabbar li:hover {
+    background-color: #C92007;
+    color: white;
+}
+
+.newspic {
+    margin-top: 55px;
+    width: 100%;
+    height: 380px;
+}
+
+.newspic img {
+    width: 100%;
+    height: 380px;
+}
+
+.newstext {
+    width: 100%;
+    height: 284px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newstext-title, .newstext-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.newstext-text {
+    flex: 1;
+}
+
+.newstext-text p {
+    line-height: 24px;
+}
+
+.newstext-title {
+    font-size: 24px;
+    margin-top: 72px;
+}
+
+.newstext-title p:nth-child(2) {
+    font-weight: bold;
+}
+
+.newsimgs {
+    width: 100%;
+    height: 720px;
+
+    display: flex;
+}
+
+.newsimgs img {
+    vertical-align: middle;
+}
+
+.newsimgs-left {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.newsimgs-left img {
+    width: 300px;
+    height: 170px;
+    margin-bottom: 4px;
+}
+
+.newsimgs-left img:nth-child(1) {
+    height: 202px;
+    margin-bottom: 5px;
+}
+
+.newsimgs-left img:last-child {
+    margin-bottom: 0;
+    height: 165px;
+}
+
+.newsimgs-middle {
+    width: 580px;
+    height: inherit;
+    margin-right: 10px;
+}
+
+.newsimgs-middle img {
+    width: 100%;
+    height: 360px;
+}
+
+.newsimgs-right {
+    width: 298px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsimgs-right img {
+    width: 100%;
+    height: 514px;
+}
+
+.newsimgs-right img:nth-child(1) {
+    height: 202px;
+    margin-bottom: 5px;
+}
