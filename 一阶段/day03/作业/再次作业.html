@@ -18,14 +18,18 @@
             padding: 0;
         }
 
+        li {
+            list-style: none;
+        }
+
         .w {
             width: 1200px;
             margin: 0 auto;
 
         }
 
-        li {
-            list-style: none;
+        .header li {
+
             width: 86px;
             text-align: center;
         }
@@ -75,12 +79,146 @@
             color: red;
         }
 
-        li:nth-child(1) {
+        .nav-a li:nth-child(1) {
             width: 64px;
         }
 
-        li:nth-child(6) {
+        .nav-a li:nth-child(6) {
             width: 64px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 368px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner .lunbo {
+            width: 100%;
+            height: 368px;
+
+
+        }
+
+        .main {
+            margin-top: 56px;
+        }
+
+        .banner .p1 {
+            position: absolute;
+            top: 110px;
+            color: white;
+            font-size: 56px;
+            font-weight: bold;
+            letter-spacing: 20px;
+        }
+
+        .banner .p2 {
+            position: absolute;
+            top: 200px;
+            color: white;
+            font-size: 20px;
+            letter-spacing: 30px;
+            margin-left: 10px;
+        }
+
+        .menu {
+            width: 996px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid red;
+
+
+
+            /* 为什么还要加margin */
+            margin: 0 auto;
+
+        }
+
+        .menu li {
+            flex: 1;
+            text-align: center;
+            line-height: 48px;
+            border-right: 1px solid red;
+            cursor: pointer;
+
+        }
+
+        .menu li:last-child {
+            border-right: none;
+        }
+
+        .menu li:first-child {
+            background-color: red;
+            color: white;
+        }
+
+        .menu li:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .main .news-pic {
+            width: 100%;
+            height: 380px;
+            margin-top: 55px;
+        }
+
+        .main .news-pic {
+            width: 100%;
+            height: 380px;
+        }
+
+        .wenzi {
+            width: 100%;
+            height: 284px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .wenzi .p1 {
+            font-size: 24px;
+            margin-top: 72px;
+        }
+
+        .wenzi .p2 {
+            font-weight: bold;
+        }
+
+        .wenzi .p3 {
+            line-height: 24px;
+        }
+
+        .new-pics {
+            display: flex;
+            width: 100%;
+            height: 720px;
+
+        }
+
+        .new-pics img {
+            vertical-align: middle ;
+        }
+
+        .new-pics-left {
+            display: flex;
+            width: 300px;
+            height: 170px;
+            margin-right: 10px;
+            flex-direction: column;
+        }
+        .new-pics-middle{
+            width: 580px;
+            height: inherit;
+            margin-right: 10px;
+        }
+        .new-pics-right{
+
         }
     </style>
 </head>
@@ -100,6 +238,51 @@
                     <li class="nav"><a href="">联系我们</a></li>
                 </ul>
                 <img src="./codes/images/dianhua.png" class="dianhua" alt="">
+            </div>
+        </div>
+        <div class="banner">
+            <img src="./codes/images/banner.jpg" class="lunbo" alt="">
+            <p class="p1">卓越品质</p>
+            <p class="p2">细节成就经典</p>
+        </div>
+        <div class="main">
+            <div class="main-w w">
+                <div class="news">
+                    <ul class="menu">
+                        <li>照明设计</li>
+                        <li>灯光节策划</li>
+                        <li>主题乐园灯光策划</li>
+                        <li>照明工程顾问</li>
+                        <li>商业展陈</li>
+                    </ul>
+                </div>
+                <div class="news-pic">
+                    <img src="./codes/images/b-1.png" alt="">
+                </div>
+                <div class="wenzi">
+                    <p class="p1">照明设计</p>
+                    <p class="p2">LIGHTING DESING</p>
+                    <p class="p3">是肯定就爱上卡来得及是爱上卡来得及是肯定就爱上卡来得及</p>
+                    <p class="p3">是肯定就爱上卡来得及是爱啊实打实上卡来得及是肯定就爱上卡来得及</p>
+                    <p class="p3">是肯定就爱上卡来得及是爱啊实打实上卡来得及是肯定就爱上撒大声地阿萨卡来得及</p>
+                    <p class="p3">是肯定就爱上卡来得及是爱上卡来及</p>
+                </div>
+                <div class="new-pics">
+                    <div class="new-pics-left">
+                        <img src="./codes/images/b-2.png" class="new-pics-left-1" alt="">
+                        <img src="./codes/images/b-2.png" class="new-pics-left-2" alt="">
+                        <img src="./codes/images/b-2.png" class="new-pics-left-2" alt="">
+                        <img src="./codes/images/b-2.png" class="new-pics-left-3" alt="">
+                    </div>
+                    <div class="new-pics-middle">
+                        <img src="./codes/images/b-3.png" alt="">
+                        <img src="./codes/images/b-3.png" alt="">
+                    </div>
+                    <div class="new-pics-right">
+                        <img src="./codes/images/b-4.png" alt="">
+                        <img src="./codes/images/b-5.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
