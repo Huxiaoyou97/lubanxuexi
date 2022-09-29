@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+        .container {
+            width: 1200px;
+            height: 720px;
+            margin: 20px auto 0;
+            background-color: red;
+            display: flex;
+        }
+
+        .left {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 11px;
+        }
+
+        .left img {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        .left img:last-child {
+            margin-bottom: 0;
+        }
+
+        .left img:first-child {
+            height: 202px;
+        }
+
+        .left img:nth-child(2) {
+            height: 170px;
+        }
+
+        .left img:nth-child(3) {
+            height: 172px;
+        }
+
+        .left img:nth-child(4) {
+            height: 165px;
+        }
+
+        .middle {
+            width: 580px;
+            margin-right: 11px;
+        }
+
+        .middle img {
+            width: 100%;
+        }
+
+        .middle img:nth-child(1) {
+            height: 362px;
+        }
+
+        .middle img:nth-child(2) {
+            height: 358px;
+        }
+
+
+        .right {
+            width: 298px;
+        }
+
+        .right img {
+            width: 100%;
+        }
+
+        .right img:first-child {
+            height: 202px;
+            margin-bottom: 4px;
+        }
+
+        .right img:last-child {
+            height: 514px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="left">
+        <img src="./images/b-2.png" alt="">
+        <img src="./images/b-2.png" alt="">
+        <img src="./images/b-2.png" alt="">
+        <img src="./images/b-2.png" alt="">
+    </div>
+
+    <div class="middle">
+        <img src="./images/b-3.png" alt="">
+        <img src="./images/b-3.png" alt="">
+    </div>
+
+    <div class="right">
+        <img src="./images/b-4.png" alt="">
+        <img src="./images/b-5.png" alt="">
+    </div>
+
+</div>
+</body>
+</html>
