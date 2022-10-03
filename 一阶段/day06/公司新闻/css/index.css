@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.navbar {
+    height: 48px;
+    display: flex;
+    margin-left: 300px;
+}
+
+.navbar .navbar_item {
+    width: 200px;
+    height: 48px;
+    border: 1px solid #C92007;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 既有navbar_item 也有active的名字 */
+.navbar .navbar_item.active,
+.navbar .navbar_item:hover {
+    color: white;
+    background-color: #C92007;
+}
+
+
+/* news */
+.news {
+    width: 100%;
+    margin-top: 108px;
+}
+
+.news_item {
+    width: 100%;
+    height: 212px;
+    border-bottom: 1px dashed red;
+    display: flex;
+}
+
+.news_item_left {
+    width: 153px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news_item_middle {
+    width: 266px;
+    height: 212px;
+}
+
+.news_item_right {
+    width: 781px;
+    height: 212px;
+    padding-left: 35px;
+    /*background-color: orange;*/
+}
+
+.news_item_left p:first-child {
+    color: #ACACAC;
+    font-size: 56px;
+}
+
+.news_item_left p:last-child {
+    color: #ACACAC;
+}
+
+.news_item_middle img {
+    width: 100%;
+    height: 173px;
+}
+
+/*746 116*/
+
+.news_item_right .textbox {
+    width: 746px;
+    height: 116px;
+    border-bottom: 1px solid red;
+}
+
+.textbox .title {
+    font-size: 20px;
+    color: #373636;
+}
+
+.textbox .subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-top: 16px;
+    line-height: 24px;
+
+    /* 文字两端对齐 */
+    text-align: justify;
+}
+
+.button {
+    width: 72px;
+    height: 36px;
+    border: 1px solid #848484;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+
+    /* 禁止元素的文字被选中 */
+    user-select: none;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.button:active {
+    background-color: rgba(0, 0, 0, .2);
+}
