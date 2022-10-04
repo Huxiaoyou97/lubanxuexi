@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 什么是数据类型
+    // 1.数据类型是什么
+    // 2.数据类型有哪些
+    // 3.数据类型有什么用
+
+    // 1.数据类型是什么
+    // 数据类型是用来描述数据的特征的
+
+    // 2.数据类型有哪些
+    // 2.1 基本数据类型
+    // 2.1.1 数值类型 number
+    /**
+     * number 类型代表整数和浮点(小数)数。
+     * 数字可以有很多操作，比如，乘法 * 、除法 / 、加法 + 、减法 - 等等。
+     */
+    let num = 10;
+    let floatNum = 10.1;
+
+    // 2.1.2 字符串类型 string
+    /**
+     * 在 JavaScript 中，有三种申明字符串的方式。
+     * 1. 双引号： "Hello" .
+     * 2. 单引号： 'Hello' .
+     * 3. 反引号： `Hello` .
+     */
+    let s1 = "Hello";
+    let s2 = 'Hello';
+    let s3 = `Hello`;
+
+    let username = "coderWhy"
+    let age = 18
+
+    let info = "我叫" + username + ", 我今年" + age + "岁了" // 字符串拼接
+    let info2 = `我叫${username}，我今年${age}岁了` // ES6 模板字符串
+    console.log(info2)
+
+
+
+    // 2.1.3 布尔类型 boolean
+    /**
+     * boolean 类型仅包含两个值： true 和 false 。
+     * 这种类型通常用于存储表示 yes 或 no 的值： true 意味着 “yes，正确”， false 意味着 “no，不正确”。
+     */
+    let b1 = true;
+    let b2 = false;
+
+
+    // 2.1.4 null类型 null
+    let n = null;
+
+    /**
+     * 特殊的 null 值不属于任何一种类型。
+     * 它构成了一个独立的类型，只包含 null 值：
+     *
+     * 相比较于其他编程语言，JavaScript 中的 null 不是一个“对不存在的 object 的引用”或者 “null指针”。
+     * JavaScript 中的 null 仅仅是一个代表“无”、“空”或“值未知”的特殊值。
+     * 上面的代码表示 n 是未知的。
+     */
+
+    // 2.1.5 undefined类型 undefined
+    /**
+     * 特殊值 undefined 和 null 一样自成类型。
+     * undefined 的含义是 未被赋值。
+     *
+     * 如果一个变量已被声明，但未被赋值，那么它的值就是 undefined
+     */
+    let u // undefined
+
+
+    // 2.2 复杂数据类型
+    // 2.2.1 对象类型 object
+    // 2.2.2 数组类型 array
+    // 2.2.3 函数类型 function
+
+    // 3.数据类型有什么用
+    // 3.1 用来描述数据的特征
+    // 3.2 用来区分数据的类型
+
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!--    <style>-->
+<!--        #username {-->
+
+<!--        }-->
+
+<!--        .username {-->
+<!--            -->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<div>
+    <span>用户名：</span> <input id="username" type="text">
+</div>
+<button class="btn">获取用户名</button>
+<!--    <div>-->
+<!--        <span>密码：</span> <input type="password">-->
+<!--    </div>-->
+</body>
+
+<script>
+    // 第一种常用的获取dom元素的方法
+    const usernameInput = document.getElementById("username") // Dom 对象
+
+    // 第二种常用的获取dom元素的方法
+    const btnElement = document.querySelector(".btn")
+    // 给btn绑定点击事件
+    btnElement.onclick = function () {
+        let text = usernameInput.value
+        alert(text)
+    }
+
+    // js获取dom的元素的方式
+    // 1. 通过id获取
+    // 2. 通过标签名获取
+    // 3. 通过class类名获取
+    // 4. 通过name属性获取
+    // 5. 通过选择器获取
+    // 6. 通过选择器获取所有的元素
+
+    // 1. 通过id获取
+    // document.getElementById('id的值')
+    // var username = document.getElementById('username')
+    // console.log(username)
+
+    // 2. 通过标签名获取
+    // document.getElementsByTagName('标签名')
+    // var input = document.getElementsByTagName('input')
+    // console.log(input)
+
+    // 3. 通过类名获取
+    // document.getElementsByClassName('类名')
+    // var username = document.getElementsByClassName('username')
+    // console.log(username)
+
+    // 4. 通过name属性获取
+    // document.getElementsByName('name属性的值')
+    // var username = document.getElementsByName('username')
+    // console.log(username)
+
+    // 5. 通过选择器获取
+    // document.querySelector('选择器')
+    // var username = document.querySelector('.username')
+    // console.log(username)
+
+    // 6. 通过选择器获取所有的元素
+    // document.querySelectorAll('选择器')
+    // var input = document.querySelectorAll('input')
+    // console.log(input)
+
+
+</script>
+</html>
