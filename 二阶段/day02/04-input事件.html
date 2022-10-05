@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div>
+    <span>用户名：</span> <input type="text" id="username" placeholder="请输入用户名">
+</div>
+<div>
+    <span>年龄：</span> <input type="number" id="age" placeholder="请输入年龄">
+</div>
+
+<!--<button>获取用户信息</button>-->
+
+<script>
+
+    let userinfo = {
+        username: null,
+        age: null
+    }
+
+    let usernameDom = document.getElementById("username")
+    let ageDom = document.getElementById("age")
+    console.log(usernameDom, ageDom, "-----dom")
+
+    // onchange 输入框失去焦点后触发
+    // oninput 输入框的值一旦发生改变就会触发
+
+
+    usernameDom.oninput = function () {
+        // this此时此刻指向的是自身 也就是input的dom元素
+        userinfo.username = this.value
+        console.log(userinfo)
+    }
+
+    ageDom.oninput = function () {
+        userinfo.age = this.value
+        console.log(userinfo)
+    }
+
+
+</script>
+
+</body>
+</html>
