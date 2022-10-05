@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复习</title>
+</head>
+<body>
+<input type="text" id="username">
+
+<button class="btn">按钮</button>
+</body>
+<script>
+    // 第一步 获取input dom元素
+    const inputDom = document.getElementById("username")
+
+    // 第二步 获取button按钮的dom元素
+    const btnDom = document.querySelector(".btn")
+
+    // 第三步 给button按钮绑定点击事件
+    btnDom.onclick = function () {
+        // 第四步 获取input框中的值
+        let text = inputDom.value
+
+        // 第五步 弹出input框的值
+        alert(text)
+    }
+
+
+</script>
+</html>
