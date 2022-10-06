@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // 什么是if？
+    // if是一个关键字，用来判断条件是否成立
+    // if后面跟着的是一个条件，条件成立，执行if后面的代码块
+    // if后面的代码块，必须用{}包裹起来
+    // if后面的代码块，只有一行代码，{}可以省略
+
+
+    // 语法：
+    // if(条件){
+    //     代码块
+    // }
+
+    // 例子：
+    let n = 2
+    // 双等号，只判断值是否相等
+    // 三等号，判断值和类型是否相等
+    if (n == '2') {
+        console.log("条件成立")
+    }
+
+    if (2 < 1) {
+        console.log("条件成立")
+    } else {
+        console.log("条件不成立")
+    }
+
+    if (2 < 1) {
+        console.log("1")
+    } else if (2 > 1) {
+        console.log("2")
+    } else {
+        console.log("3")
+    }
+
+
+    if (2 > 1) console.log("4")
+
+    let n1 = 10
+    // console.log(n1++ - n1 > 10 ? 9 : 10 + --n1)
+    // console.log(
+    //    // 11                      10
+    //     n1++ - n1 > 10 ? 9 : 10 + --n1 - n1 <= 8 ? 10 : 7 - --n1 + ++n1 - n1--
+    // //  10  - 11             10 +  10 -  10             7 -  9   +  10  - 10   //  -2
+    // //  10  - 11            10  +9  -9              7    6  +  7  - 7
+    // )
+
+    // console.log(
+    //     //
+    //     n1++ - (n1 > 10 ? 9 : 10) + --n1 - (n1 <= 8 ? 10 : 7) - --n1 + ++n1 - n1--
+    // //   10  -         9          +  10  -          7         -   9  +   10  -  10
+    // //
+    // )
+
+    console.log(
+        //
+        n1++ - (++n1 > 10 ? 9 : 10) + --n1 - (n1-- <= 8 ? --n1 : n1++) - --n1 + ++n1 - n1--
+    //   10  -           9          +  11  -           10              -  10  +  11  - 11 // -8
+    //  10   -           9          +  11  -           10              -   10 +   11 - 11
+    //
+    )
+
+</script>
+</body>
+</html>
