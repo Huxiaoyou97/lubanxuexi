@@ -86,18 +86,59 @@
 
     // 2.显示类型转换
     // 2.1.将字符串转换为数字
-    // 2.2.将数字转换为字符串
-    // 2.3.将布尔值转换为字符串
-    // 2.4.将布尔值转换为数字
-    // 2.5.将数字转换为布尔值
-    // 2.6.将字符串转换为布尔值
-    // 2.7.将null转换为数字
-    // 2.8.将null转换为字符串
-    // 2.9.将null转换为布尔值
-    // 2.10.将undefined转换为数字
-    // 2.11.将undefined转换为字符串
-    // 2.12.将undefined转换为布尔值
+    let s9 = '123';
+    let n9 = Number(s9); // Number()函数可以将一个字符串转换为数字
+    // console.log(n9, typeof n9, "------n9") // 123
 
+    // 2.2.将数字转换为字符串
+    let n10 = 123;
+    let s10 = String(n10); // String()函数可以将一个数字转换为字符串
+    // console.log(s10, typeof s10, "------s10") // '123'
+
+    // 2.3.将布尔值转换为字符串
+    let b7 = true;
+    let s11 = String(b7); // String()函数可以将一个布尔值转换为字符串
+    // console.log(s11, typeof s11, "------s11") // 'true'
+
+    // 2.4.将布尔值转换为数字
+    let b8 = true;
+    let n11 = Number(b8); // Number()函数可以将一个布尔值转换为数字
+    // console.log(n11, typeof n11, "------n11") // 1
+
+    // 2.5.将数字转换为布尔值
+    let n12 = 123;
+    let b9 = Boolean(n12); // Boolean()函数可以将一个数字转换为布尔值
+    // console.log(b9, typeof b9, "------b9") // true
+
+
+    // 2.6.将字符串转换为布尔值
+    let s12 = '123';
+    let b10 = Boolean(s12); // Boolean()函数可以将一个字符串转换为布尔值
+    // console.log(b10, typeof b10, "------b10") // true
+
+    // 2.7.将null转换为数字
+    let n13 = Number(null); // Number()函数可以将一个null转换为数字
+    // console.log(n13, typeof n13, "------n13") // 0
+
+    // 2.8.将null转换为字符串
+    let s13 = String(null); // String()函数可以将一个null转换为字符串
+    // console.log(s13, typeof s13, "------s13") // 'null'
+
+    // 2.9.将null转换为布尔值
+    let b11 = Boolean(null); // Boolean()函数可以将一个null转换为布尔值
+    // console.log(b11, typeof b11, "------b11") // false
+
+    // 2.10.将undefined转换为数字
+    let n14 = Number(undefined); // Number()函数可以将一个undefined转换为数字
+    // console.log(n14, typeof n14, "------n14") // NaN
+
+    // 2.11.将undefined转换为字符串
+    let s14 = String(undefined); // String()函数可以将一个undefined转换为字符串
+    // console.log(s14, typeof s14, "------s14") // 'undefined'
+
+    // 2.12.将undefined转换为布尔值
+    let b12 = Boolean(undefined); // Boolean()函数可以将一个undefined转换为布尔值
+    // console.log(b12, typeof b12, "------b12") // false
 
 </script>
 </html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // js的表达式
+    // 1. 语法
+    // 2. 作用
+    // 3. 分类
+    // 4. 优先级
+
+    // 1. 赋值运算符
+    let a = 10
+    let b = 2
+
+    // 2. 算术运算符
+    let c = a + b
+    let d = a - b
+    let e = a * b
+    let f = a / b
+    let g = a % b
+
+    // 3. 自增自减运算符
+    let h = 10
+    // ++在前 先计算 后赋值
+    // ++在后 先赋值 后计算
+
+    // console.log(
+    //     h++ + ++h - --h + h-- - h++ + h--
+    //     //  10 +  12 -  11 +  11  - 10  + 11
+    // ) // 23
+
+    // let h1 = 20
+    // console.log(
+    //     --h1 + h1-- + ++h1 + --h1 + h1-- + ++h1 + --h1
+    // //    19 + 19  +  19   +  18  +  18  +  18  + 17
+    // )
+
+    // let h2 = 10
+    // console.log(
+    //     h2++ - --h2 + h2-- + --h2 - h2++ + ++h2 - --h2 + h2++ + ++h2
+    // //  10   -10    + 10   +  8   -  8   +  10  -   9  +  9   +  11
+    // //  10  -  10  +  10  +  8   -   8   +  10  -   9 +   9   +  11
+    // )
+
+
+    // 4. 比较运算符 返回值一定是boolean类型
+    // console.log(10 > 20) // false
+    // console.log(10 < 20) // true
+    // console.log(10 >= 20) // false
+    // console.log(10 <= 20) // true
+    // console.log(10 == 20) // false
+    // console.log(10 != 20) // true
+    // console.log(10 === 20) // false
+    // console.log(10 !== 20) // true
+
+
+    // 5. 逻辑运算符
+    // && 并且
+    // || 或
+    // !  取反
+    // console.log(10 > 20 && 10 < 20) // false 只要有一个false 就是false
+    // console.log(10 > 20 || 10 < 20) // true 只要有一个true 就是true
+    // console.log(!(10 > 20)) // true
+
+
+    // 6. 三元运算符
+    // 语法: 条件 ? 表达式1 : 表达式2
+    // 条件成立 返回表达式1
+    // 条件不成立 返回表达式2
+
+    let n1 = 10 > 9 ? 8 : 7
+    console.log(n1) // 8
+    console.log(10 > 20 ? 10 : 20) // 20
+    console.log(10 < 20 ? 10 : 20) // 10
+
+
+</script>
+
+</body>
+</html>
