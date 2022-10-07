@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input id="year" type="number" placeholder="请输入年份">
+<span id="text"></span>
+
+
+<script>
+    const yearDom = document.getElementById("year")
+    const textDom = document.getElementById("text")
+
+    yearDom.oninput = function () {
+        let val = parseInt(this.value)
+
+        // 判断闰年的方法
+        // 1. 能被4整除并且不能被100整除
+        // 2. 能被400整除
+
+        //  判断平年的方法
+        // 1. 能被100整除并且不能被400整除
+        // 2. 不能被4整除
+
+        // innerText innerHTML 都可以设置
+        if (val < 1000 || val > 3000) {
+            // 输入不合法
+            textDom.innerHTML = "<span style='color: red'>输入不合法</span>"
+        } else if (val % 4 === 0 && val % 100 !== 0 || val % 400 === 0) {
+            // 闰年
+            textDom.innerText = "闰年"
+        } else {
+            // 平年
+            textDom.innerText = "平年"
+        }
+
+
+    }
+
+
+</script>
+</body>
+</html>
