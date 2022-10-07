@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .foot {
+            width: 100%;
+            background-color: #dadada;
+        }
+
+        .banquan {
+            width: 100%;
+            height: 46px;
+            border-top: 1px solid red;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .footer {
+            height: 398px;
+            display: flex;
+        }
+
+        .footer-left {
+            width: 488px;
+            height: 356px;
+            margin-top: 42px;
+            border-right: 1px solid red;
+        }
+
+        .footer-right {
+            height: 356px;
+            flex: 1;
+        }
+
+        .logo {}
+
+        .gongsi {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo .mingcheng {
+            margin-left: 14px;
+
+        }
+
+        .logo .zh {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        .logo .en {
+            font-size: 12px;
+            letter-spacing: .7px;
+        }
+
+        .logo .address {
+            margin-top: 7px;
+        }
+
+        .logo .address li {
+            width: 100%;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .address li div {
+            width: 46px;
+        }
+
+        .footer-right {
+            width: 100%;
+            height: 356px;
+            display: flex;
+            margin-top: 42px;
+        }
+
+        .fuwu {
+            width: 382px;
+            height: 356px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fuwurexian {
+            width: 100%;
+            height: 104px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .fuwurexian .tel {
+            width: 44px;
+            height: 44px;
+            margin-left: 76px;
+        }
+
+        .tel-1 {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .erweima {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .tel-1 span:first-child {
+            font-size: 12px;
+        }
+
+        .tel-1 span:last-child {
+            color: red;
+        }
+
+        .erweima-1 {
+            width: 120px;
+            height: 120px;
+            margin-top: 20px;
+        }
+        .erweima span{
+            margin-top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="foot">
+        <div class="footer w">
+            <div class="footer-left">
+                <div class="logo">
+                    <div class="gongsi">
+                        <img src="./images/logo-2.png" class="logo-1" alt="">
+                        <div class="mingcheng">
+                            <p class="zh">北京泰和照明设计有限公司</p>
+                            <p class="en">BEIJING BAND LIGHTING DESIGN CO., LTO</p>
+                        </div>
+                    </div>
+                    <ul class="address">
+                        <li>
+                            <div class="ico"><img src="./images/icon-1.png" alt=""></div>
+                            <span>北京市朝阳区 朝阳北路 大悦城北楼2905室</span>
+                        </li>
+                        <li>
+                            <div class="ico"><img src="./images/icon-2.png" alt=""></div>
+                            <span>010-88888888</span>
+                        </li>
+                        <li>
+                            <div class="ico"><img src="./images/icon-3.png" alt=""></div>
+                            <span>010-88888888</span>
+                        </li>
+                        <li>
+                            <div class="ico"><img src="./images/icon-4.png" alt=""></div>
+                            <span>huxiaoyou888@gmail.com</span>
+                        </li>
+                        <li>
+                            <div class="ico"><img src="./images/icon-5.png" alt=""></div>
+                            <span>https://www.baidu.com</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="fuwu">
+                    <div class="fuwurexian">
+                        <img src="./images/dianhua2.png" class="tel" alt="">
+                        <div class="tel-1">
+                            <span>全国服务热线</span>
+                            <span>010-8888 8888</span>
+                        </div>
+                    </div>
+                    <div class="erweima">
+                        <img src="./images/erweima.png" class="erweima-1" alt="">
+                        <span>微信公众号</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banquan"></div>
+    </div>
+</body>
+
+</html>
