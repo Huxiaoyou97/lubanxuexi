@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // 什么是解构赋值?
+    // 解构赋值是一种特殊的赋值方式, 可以将一个数组或者对象中的元素或者属性, 一次性的赋值给多个变量
+
+    // 数组的解构赋值
+    const arr1 = [1, 2, 3, 4, 5];
+
+    // const [num1, num2, num3, num4, num5] = [1, 2, 3, 4, 5];
+    // console.log(num1, num2, num3, num4, num5, "---------arr1")
+
+    // const [num1, num2] = [1, 2, 3, 4, 5];
+    // console.log(num1, num2, "---------arr1")
+
+    const [, , num3, num4] = [1, 2, 3, 4, 5];
+    console.log(num3, num4, "---------arr1")
+
+    // 对象的解构赋值
+    const obj1 = {
+        username: "why",
+        age: 18,
+        sex: '女',
+        score: 100,
+        //....
+    }
+
+    const {
+        username,
+        age,
+        score,
+        sex
+    } = obj1
+
+    console.log(username, "----username")
+
+</script>
+
+</body>
+</html>

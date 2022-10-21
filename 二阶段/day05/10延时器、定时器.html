@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="timer">当前时间: </h1>
+
+<script>
+    // 延时器
+    // 1. 延时器的作用：延时执行代码
+    // 2. 延时器的语法：setTimeout(函数名, 延时时间)
+    // 3. 延时器的返回值：延时器的编号
+    // 4. 延时器的注意事项：
+    //    1. 延时器的编号是从1开始的
+    //    2. 延时器的编号是递增的
+    //    3. 延时器的编号是不会重复的
+    //    4. 延时器的编号是不会被回收的
+    //    5. 延时器的编号是不会被覆盖的
+    //    6. 延时器的编号是不会被修改的
+    //    7. 延时器的编号是不会被使用的
+    //    8. 延时器的编号是不会被释放的
+    //    9. 延时器的编号是不会被销毁的
+    //    10. 延时器的编号是不会被清除的
+    //    11. 延时器的编号是不会被删除的
+    //    12. 延时器的编号是不会被取消的
+    //    13. 延时器的编号是不会被停止的
+    //    14. 延时器的编号是不会被终止的
+    //    15. 延时器的编号是不会被中断的
+    //    16. 延时器的编号是不会被暂停的
+
+    // 5. 延时器的使用场景：
+    //    1. 延时执行代码
+    //    2. 延时执行函数
+    //    3. 延时执行匿名函数
+    //    4. 延时执行箭头函数
+
+    // setTimeout(() => {
+    //     console.log("哈哈 我被执行啦！")
+    // }, 3000)
+
+
+    // 定时器
+    const timerDom = document.getElementById('timer')
+
+    let t = setInterval(() => {
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth() + 1;
+        let day = now.getDate();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+        let week = now.getDay();
+        let weekStr = '';
+        switch (week) {
+            case 0:
+                weekStr = '星期日';
+                break;
+            case 1:
+                weekStr = '星期一';
+                break;
+            case 2:
+                weekStr = '星期二';
+                break;
+            case 3:
+                weekStr = '星期三';
+                break;
+            case 4:
+                weekStr = '星期四';
+                break;
+            case 5:
+                weekStr = '星期五';
+                break;
+            case 6:
+                weekStr = '星期六';
+                break;
+        }
+
+        let str = year + '年' + month + '月' + day + '日' + hour + '时' + minute + '分' + second + '秒' + weekStr
+        timerDom.innerText = '当前时间: ' + str
+    }, 1000)
+
+    // 三秒之后销毁定时器
+    setTimeout(() => {
+        clearInterval(t) // 销毁定时器
+    }, 3000)
+
+
+
+
+
+</script>
+
+</body>
+</html>

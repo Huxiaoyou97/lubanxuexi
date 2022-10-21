@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--  引用数据类型  -->
+
+<script>
+    // 什么是引用数据类型？
+    // 引用数据类型是一种复杂的数据类型，引用数据类型的值是对象，对象是一组数据和功能的集合
+    // 对象是引用数据类型的唯一值，对象是无序属性的集合，每个属性都包含一个名字和一个值
+    // 对象的属性名是字符串，属性值可以是任意的数据类型，包括基本数据类型和引用数据类型
+
+
+
+    // 对象是什么?
+    // 对象是一种数据类型, 用来存储多个数据
+    // 对象是一种复合数据类型, 由多个基本数据类型组成
+    // 对象是一种引用数据类型, 保存的是内存地址
+
+    // let obj = new Object()
+    let obj1 = {
+        username: "why"
+    }
+    // console.log(obj1.username) // why
+
+    let obj2 = obj1
+    // console.log(obj2 === obj1, "----------1") // true
+
+    obj2.username = "zhangsan"
+
+    console.log(obj2.username, "----------2 username") // zhangsan
+    console.log(obj1.username, "----------1 username") // zhangsan
+    // 值之所以是一样的 因为obj2直接浅拷贝了obj1  两者指向的同一个内存地址 所以改变obj2 自然也会改变obj1
+
+
+</script>
+</body>
+</html>

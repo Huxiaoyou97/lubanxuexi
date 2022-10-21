@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    const arr1 = [1, 2, 3, 4, 5, 6, 10, 11, 7, 8, 9]
+    // 数组的api
+    // 1. 数组的遍历
+    // 1.1 forEach
+    arr1.forEach(function (item, index, array) {
+        // console.log(item, index, array, "----forEach")
+    })
+
+    // 1.2 map
+    const arr2 = arr1.map(function (item, index, array) {
+        return item * 2
+    })
+    // console.log(arr2, "----map")
+
+    // 1.3 filter
+    const arr3 = arr1.filter(function (item, index, array) {
+        return item > 5
+    })
+    // console.log(arr3, "----filter")
+
+    // 1.4 some
+    const arr4 = arr1.some(function (item, index, array) {
+        return item > 5
+    })
+    // console.log(arr4, "----some") // true 只要有一个满足条件 就返回true 否则返回false
+
+    // 1.8 find
+    const arr8 = arr1.find(function (item, index, array) {
+        return item > 5
+    })
+    // console.log(arr8, "----find") // 6 只要有一个满足条件 就返回该元素 否则返回undefined
+
+    // 1.9 findIndex
+    const arr9 = arr1.findIndex(function (item, index, array) {
+        return item > 5
+    })
+    // console.log(arr9, "----findIndex") // 5 只要有一个满足条件 就返回该元素的索引 否则返回-1
+
+    // 1.10 indexOf
+    const arr10 = arr1.indexOf(5)
+    // console.log(arr10, "----indexOf") // 4 返回元素的索引 否则返回-1
+
+    // 1.12 includes
+    const arr12 = arr1.includes(5)
+    // console.log(arr12, "----includes") // true 判断数组中是否包含某个元素 包含返回true 否则返回false
+
+    // 2. 数组的操作
+    // 2.1 push
+    // const arr5 = arr1.push(10) // 往数组的末尾添加元素
+    // console.log(arr5, "----push") // 10 返回数组的长度
+
+    // 2.2 pop
+    // const arr6 = arr1.pop() // 删除数组的最后一个元素
+    // console.log(arr6, "----pop") // 10 返回数组的最后一个元素
+
+    // 2.3 shift
+    // const arr7 = arr1.shift() // 删除数组的第一个元素
+    // console.log(arr7, "----shift") // 1 返回数组的第一个元素
+
+    // 2.4 unshift
+    // const arr11 = arr1.unshift(10) // 往数组的前面添加元素
+    // console.log(arr11, arr1, "----unshift") // 9 返回数组的长度
+
+    // 2.5 splice
+    // const arr13 = arr1.splice(2, 3, 10, 20, 30) // 删除数组的第二个元素开始的3个元素 并且在第二个元素的位置添加10 20 30
+    // console.log(arr13, arr1, "----splice") // 返回删除的元素
+
+    // 2.6 slice
+    // const arr14 = arr1.slice(2, 5) // 从数组的第二个元素开始截取到第五个元素 左开右闭
+    // console.log(arr14, arr1, "----slice") // 返回截取的元素
+
+    // 2.7 concat
+    // const arr15 = arr1.concat([10, 20, 30]) // 将数组和数组或者元素连接起来
+    // console.log(arr15, "----concat") // 返回连接后的数组
+
+    // 2.8 join
+    // const arr16 = arr1.join("-") // 将数组中的元素用指定的符号连接起来
+    // console.log(arr16, "----join") // 返回连接后的字符串
+
+    // 2.9 reverse
+    // const arr17 = arr1.reverse() // 将数组中的元素倒序
+    // console.log(arr17, "----reverse") // 返回倒序后的数组
+
+    // 2.10 sort
+    // const arr18 = arr1.sort(function (a, b) {
+    //     return a - b
+    // }) // 将数组中的元素排序 会改变原数组
+    // console.log(arr18, "----sort") // 返回排序后的数组
+
+    // 2.13 flat
+    // const arr21 = [1, 2, [3, 4, [5, 6]]]
+    // const arr22 = arr21.flat(2) // 将数组中的元素排序 不会改变原数组
+    // console.log(arr22, "----flat")
+
+    // 2.15 from
+    // const arr24 = Array.from(arr1) // 将类数组转换成数组
+    // console.log(arr24, "----from")
+
+    // 2.16 of
+    // const arr25 = Array.of(1, 2, 3) // 将一组值转换成数组
+    // console.log(arr25, "----of")
+
+    // 2.17 isArray
+    // const arr26 = Array.isArray(arr1) // 判断是否是数组
+    // console.log(arr26, "----isArray")
+
+    // 2.18 toString
+    // const arr27 = arr1.toString() // 将数组转换成字符串
+    // console.log(arr27, "----toString")
+
+    // 2.19 toLocaleString
+    // const arr28 = arr1.toLocaleString() // 将数组转换成本地字符串
+    // console.log(arr28, "----toLocaleString")
+
+    // 2.24 valueOf
+    // const arr33 = arr1.valueOf() // 返回数组本身
+    // console.log(arr33, "----valueOf")
+
+    // 2.25 length
+    // const arr34 = arr1.length // 返回数组的长度
+    // console.log(arr34, "----length")
+
+    // 3. 数组的属性
+    // 3.1 length
+    // const arr19 = arr1.length // 返回数组的长度
+    // console.log(arr19, "----length")
+
+    // 3.2 prototype
+    // const arr20 = arr1.prototype // 返回数组的原型
+    // console.log(arr20, "----prototype")
+
+
+</script>
+</body>
+</html>

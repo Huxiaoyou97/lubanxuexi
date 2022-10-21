@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let json = {
+        username: "why",
+        age: 18,
+        score: 100,
+
+        toString() {
+            return "我的名字: " + this.username + ", 我的年龄: " + this.age + ", 我的成绩: " + this.score
+        }
+    }
+
+    // let str = "我的名字: " + json.username + ", 我的年龄: " + json.age + ", 我的成绩: " + json.score
+    // console.log(json.toString(), "-------str")
+
+
+    let json2 = {
+        username: "why",
+        age: 18,
+        score: 100,
+    }
+    // let json3 = json2 // 只是拷贝了一份赋值给了json3  实际的内存地址是一样的
+    // json3.age = 20
+    //
+    // console.log(json3, "----3")
+    // console.log(json2, "----2")
+
+    // let str = JSON.stringify(json2)
+    // console.log(str, "------json2") // 将数据转换成字符串
+    //
+    // let json3 = JSON.parse(str)
+    // console.log(json3, "-------json3")
+
+    let json4 = JSON.parse(JSON.stringify(json2))
+    json4.age = 20
+    console.log(json4, "------json4")
+    console.log(json2, "------json2")
+
+
+
+    // let s1 = "123"
+    // let s2 = s1 // 内存地址复制了一份 指向的不是同一个内存地址
+    // s2 = '456'
+    // console.log(s2, "----s2") // 456
+    // console.log(s1, "----s1") // 123
+
+</script>
+
+</body>
+</html>

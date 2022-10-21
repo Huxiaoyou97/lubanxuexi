@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    // 函数是什么？
+    // 函数是一段可以重复执行的代码
+
+    // 函数的定义
+    // function 函数名(形参1, 形参2, 形参3, ...) {
+    //     函数体
+    // }
+
+    // return 是什么意思？
+    // return 是一个关键字，用来结束函数的执行，并且返回一个值
+    // return 后面的值，会被返回给函数的调用者
+
+    function add(num1, num2) {
+        return num1 + num2
+    }
+
+    // 函数的调用
+    // 函数名(实参1, 实参2, 实参3, ...)
+    console.log(add(1, 2), "----------c");
+
+
+    // 匿名函数自执行 不能被调用
+    (function () {
+        console.log("匿名函数自执行")
+    }())
+
+</script>
+</body>
+</html>

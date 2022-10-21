@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    /**
+     * “symbol” 值表示唯一的标识符。
+     * 可以使用 Symbol() 来创建这种类型的值：
+     */
+
+    let id = Symbol(1)
+    console.log(id, "-------id")
+
+
+    let id1 = Symbol("id");
+    let id2 = Symbol("id");
+    console.log(id1 === id2) // false
+
+    // symbol 不会被自动转换为字符串
+    // JavaScript 中的大多数值都支持字符串的隐式转换。例如，我们可以 alert 任何值，都可以
+    // symbol 比较特殊，它不会被自动转换。
+
+    let id3 = Symbol('id')
+    // alert(id3.toString())
+
+
+    let id4 = Symbol('id')
+    console.log(id4.description, "--------desc") // id  /// 获取描述
+</script>
+</body>
+</html>

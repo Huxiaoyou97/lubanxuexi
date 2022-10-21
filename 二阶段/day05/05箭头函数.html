@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    // 什么是箭头函数
+    // 1.箭头函数是ES6中新增的函数
+    // 2.箭头函数是匿名函数
+    // 3.箭头函数的语法更加简洁
+    // 4.箭头函数中没有this,arguments,super,new.target
+    // 5.箭头函数中没有prototype属性
+
+    // 箭头函数的定义
+    // function add() {}
+    const add = () => {
+        console.log("无参箭头函数")
+    }
+    add()
+
+    const sum = (num1, num2) => {
+        return num1 - num2
+    }
+    console.log(sum(10, 9), "----------有参箭头函数")
+
+
+</script>
+</body>
+</html>
