@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    let obj = {
+        username: "why",
+        age: 18,
+        score: 100
+    }
+
+    // 对象常用api
+    // 1.获取对象的属性
+    // 1.1 获取对象的属性值
+    // 语法: 对象.属性名
+    // 语法: 对象['属性名']
+    console.log(obj.username, "--------obj.username");
+    console.log(obj['username'], "--------obj['username']");
+
+    // 1.2 获取对象的属性名
+    // 语法: Object.keys(对象) 用的很多 通常用来判断对象是否为空
+    console.log(Object.keys(obj), "--------Object.keys(obj)");
+    // 语法: Object.getOwnPropertyNames(对象)
+    console.log(Object.getOwnPropertyNames(obj), "--------Object.getOwnPropertyNames(obj)");
+
+    // 1.3 获取对象的属性描述符
+    // 语法: Object.getOwnPropertyDescriptor(对象, 属性名)
+    console.log(Object.getOwnPropertyDescriptor(obj, "username"), "--------Object.getOwnPropertyDescriptor(obj, 'username')");
+
+    // 1.4 获取对象的原型
+    // 语法: Object.getPrototypeOf(对象)
+    console.log(Object.getPrototypeOf(obj), "--------Object.getPrototypeOf(obj)");
+
+    // 2.设置对象的属性
+    // 2.1 设置对象的属性值
+    // 语法: 对象.属性名 = 属性值
+    obj.username = "kobe";
+    // 语法: 对象['属性名'] = 属性值
+    obj['username'] = "james";
+
+    // 2.2 设置对象的属性描述符
+    // 语法: Object.defineProperty(对象, 属性名, 属性描述符)
+    // Object.defineProperty(obj, "username", {
+    //     value: "kobe",
+    //     writable: false,
+    //     enumerable: false,
+    //     configurable: false
+    // })
+
+    // 2.3 设置对象的原型
+    // 语法: Object.setPrototypeOf(对象, 原型对象)
+
+    // 3.删除对象的属性
+    // 语法: delete 对象.属性名
+    // delete obj.username;
+    // 语法: delete 对象['属性名']
+    // delete obj['username'];
+
+    // 4.判断对象的属性
+    // 4.1 判断对象的属性是否存在
+    // 语法: 属性名 in 对象
+    console.log("username" in obj, "--------'username' in obj");
+
+    // 4.2 判断对象的属性是否可枚举
+    // 语法: 对象.propertyIsEnumerable(属性名)
+    // console.log(obj.propertyIsEnumerable("username"), "--------obj.propertyIsEnumerable('username')");
+
+    // 4.3 判断对象的属性是否可配置
+    // 语法: Object.getOwnPropertyDescriptor(对象, 属性名).configurable
+    // console.log(Object.getOwnPropertyDescriptor(obj, "username").configurable, "--------Object.getOwnPropertyDescriptor(obj, 'username').configurable");
+
+    // 4.4 判断对象的属性是否可写
+    // 语法: Object.getOwnPropertyDescriptor(对象, 属性名).writable
+
+    // 4.5 判断对象的属性是否可读
+    // 语法: Object.getOwnPropertyDescriptor(对象, 属性名).value
+
+    // 4.6 判断对象的属性是否是自身属性
+    // 语法: 对象.hasOwnProperty(属性名)
+    console.log(obj.hasOwnProperty("username"), "--------obj.hasOwnProperty('username')");
+
+    // 4.7 判断对象的属性是否是原型属性
+    // 语法: !对象.hasOwnProperty(属性名)
+    console.log(!obj.hasOwnProperty("username"), "--------!obj.hasOwnProperty('username')");
+
+    // 5.遍历对象的属性
+    // 5.1 遍历对象的属性名
+    // 语法: for (var 属性名 in 对象) {}
+    for (const key in obj) {
+        console.log(key, "--------key");
+    }
+
+    // 5.2 遍历对象的属性值
+    // 语法: for (var 属性名 in 对象) {
+    //          var 属性值 = 对象[属性名];
+    //      }
+    for (const key in obj) {
+        console.log(obj[key], "--------obj[key]");
+    }
+
+    // 5.3 遍历对象的属性名和属性值
+    // 语法: for (var 属性名 in 对象) {
+    //          var 属性值 = 对象[属性名];
+    //      }
+
+    // 5.4 遍历对象的自身属性名
+    // 语法: for (var 属性名 in 对象) {
+    //          if (对象.hasOwnProperty(属性名)) {
+    //              var 属性值 = 对象[属性名];
+    //          }
+    //      }
+
+</script>
+</body>
+</html>

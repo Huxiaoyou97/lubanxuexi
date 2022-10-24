@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // 什么是原型？
+    // 原型是一个对象，每个函数都有一个原型对象
+    // 原型对象中有一个属性constructor，指向函数本身
+    // function Person() {
+    // }
+
+    // console.log(Person.prototype.constructor === Person); // true
+
+
+    // let dog = {
+    //     barks: true,
+    //     sayHi() {
+    //         console.log("say hi!")
+    //     }
+    // };
+    // let animal = {
+    //     eats: true,
+    //     __proto__: dog
+    // };
+    // let rabbit = {
+    //     jumps: true,
+    //     __proto__: animal
+    // };
+    //
+    // rabbit.sayHi();
+
+
+    // rabbit.__proto__ = animal; // 设置 rabbit.[[Prototype]] = animal
+    // animal.__proto__ = dog; // 设置 animal.[[Prototype]] = dog
+
+
+    // animal 有一些方法
+    // let animal = {
+    //     walk() {
+    //         if (!this.isSleeping) {
+    //             console.log(`I walk`);
+    //         }
+    //     },
+    //     sleep() {
+    //         this.isSleeping = true;
+    //     }
+    // };
+    // let rabbit = {
+    //     name: "White Rabbit",
+    //     __proto__: animal
+    // };
+    //
+    // rabbit.sleep();
+    // rabbit.walk()
+
+
+    // 练习
+    // let hamster = {
+    //     stomach: [],
+    //     eat(food) {
+    //         this.stomach.push(food)
+    //     }
+    // };
+    // let speedy = {
+    //     __proto__: hamster
+    // };
+    // let lazy = {
+    //     __proto__: hamster
+    // };
+    // speedy.eat("apple");
+    // console.log(speedy.stomach, "------speedy");
+    // console.log(lazy.stomach, "-------lazy");
+
+
+    // class Person {
+    //     constructor(name, age) {
+    //         this.name = name
+    //         this.age = age
+    //     }
+    //
+    //     sayHi() {
+    //         console.log("我的名字: ", this.name, "我的年龄：", this.age)
+    //     }
+    // }
+    //
+    //
+    // let p = new Person("张三", 18)
+    // p.sayHi()
+
+
+    // 类的继承
+    // class Animal {
+    //     constructor(name) {
+    //         this.speed = 0;
+    //         this.name = name;
+    //     }
+    //
+    //     run(speed) {
+    //         this.speed = speed;
+    //         console.log(`${this.name} runs with speed ${this.speed}.`);
+    //     }
+    //
+    //     stop() {
+    //         this.speed = 0;
+    //         console.log(`${this.name} stands still.`);
+    //     }
+    // }
+    //
+    // class Rabbit extends Animal {
+    //     hide() {
+    //         console.log(`${this.name} hides!`);
+    //     }
+    //
+    //     // 子类重写父类方法
+    //     run(speed) {
+    //         console.log("我是Rabbit的run")
+    //         super.run(speed)
+    //     }
+    // }
+    //
+    // let rabbit = new Rabbit("My name");
+    //
+    // rabbit.hide()
+    // rabbit.run(2)
+
+
+    class Animal {
+        constructor(name) {
+            this.speed = 0;
+            this.name = name;
+        }
+    }
+
+    class Rabbit extends Animal {
+        // 继承类的 constructor 必须调用 super(...) ，并且 (!) 一定要在使用 this 之前调用。
+        constructor(name, len) {
+            super(name)
+            this.name = name;
+            this.len = len;
+        }
+    }
+
+    let animal = new Animal("zhangsan")
+    let rabbit = new Rabbit("White Rabbit", 10);
+
+    console.log(rabbit.name, "----- rabbit.name")
+    console.log(animal.name, "----- animal.name")
+
+
+</script>
+</body>
+</html>

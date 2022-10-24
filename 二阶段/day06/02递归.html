@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    // 普通函数计算次方
+    // function pow(x, n) {
+    //     let result = 1;
+    //     // 再循环中，用 x 乘以 result n 次
+    //     for (let i = 0; i < n; i++) {
+    //         result = result * x;
+    //     }
+    //     return result;
+    // }
+    //
+    // console.log(pow(2, 3)); // 8
+
+    // let result
+    // // 递归函数计算次方
+    // function pow(x, n) {
+    //     if (n === 1) {
+    //         return x;
+    //     } else {
+    //         return x * pow(x, n - 1);
+    //     }
+    // }
+    // console.log(pow(2, 3), "------123"); // 8
+
+    // 递归简单案例
+    // function sum(n) {
+    //     if (n === 1) {
+    //         return 1;
+    //     } else {
+    //         return n + sum(n - 1);
+    //     }
+    // }
+    // console.log(sum(3)); // 5050
+
+    let arr = [
+        {
+            id: 1,
+            name: "zhangsan",
+            children: [
+                {
+                    id: 11,
+                    name: "z-1",
+                    children: [
+                        {
+                            id: 111,
+                            name: "z-1-1",
+                            children: [
+                                {
+                                    id: 1111,
+                                    name: "z-1-1-1",
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+        },
+        {
+            id: 2,
+            name: "lisi",
+            children: [
+                {
+                    id: 22,
+                    name: "l-1",
+                    children: [
+                        {
+                            id: 222,
+                            name: "l-1-1",
+                        }
+                    ]
+                }
+            ],
+        },
+        {
+            id: 3,
+            name: "wangwu",
+            children: []
+        }
+    ]
+
+    // function plat(arr) {
+    //     for (const item of arr) {
+    //         if (item.children && item.children.length > 0) {
+    //             plat(item.children)
+    //         } else {
+    //             // 代表找到children为空的数据了
+    //             item['score'] = 100
+    //         }
+    //     }
+    // }
+    //
+    // plat(arr)
+
+    let result = []
+    function plat(arr) {
+        for (const item of arr) {
+            if (item.children && item.children.length > 0) {
+                result.push(item)
+                plat(item.children)
+            } else {
+                // 代表找到children为空的数据了
+                result.push(item)
+            }
+        }
+    }
+    plat(arr)
+
+    for (const item of result) {
+        delete item.children
+    }
+    console.log(result, "----result")
+
+
+
+</script>
+
+</body>
+</html>
