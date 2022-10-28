@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <meta charset="UTF-8">   
+
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        //九九乘法表 
+
+        for (var i = 1; i <= 9; i++) {
+            var s = '';
+
+            for (var j = 1; j <= i; j++) {
+                s += j + '*' + i + '=' + (i * j) + '\t'
+            }
+            console.log(s);
+        }
+
+        console.log("===================================================================")
+        for (var i = 1; i <= 9; i++) {
+            var t = '';
+
+            for (var j = i; j <= 9; j++) {
+                t += i + '*' + j + '=' + (i * j) + '\t'
+            }
+
+            console.log(t);
+        }
+
+        console.log("===================================================================")
+
+        for (var i = 1; i <= 9; i++) {
+            var u = '';
+
+            for (var k = 1; k < i; k++) {
+                u += "\t\t"
+            }
+
+            for (var j = i; j <= 9; j++) {
+                u += i + '*' + j + '=' + (i * j) + '\t'
+            }
+
+            console.log(u);
+        }
+
+    </script>
+</body>
+
+</html> 作者：物理达人Physics侯老师 https://www.bilibili.com/read/cv9538712 出处：bilibili

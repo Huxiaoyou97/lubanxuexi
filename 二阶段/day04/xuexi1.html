@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="yearDom">
+    <script>
+        // 作业一 判断闰年
+
+        // 判断闰年的方法
+        // 1. 能被4整除并且不能被100整除
+        // 2. 能被400整除
+        // const num1 = document.getElementById("yearDom")
+
+        // num1.oninput = function () {
+
+        //     const num = parseInt(num1.value)
+        //     console.log(num)
+        //     if (num < 1000 || num > 3000) {
+        //         console.log("输入不合法")
+        //     } else if (num % 4 == 0 && num % 100 !== 0 || num % 400 == 0) {
+        //         console.log("闰年")
+        //     } else {
+        //         console.log("平年")
+        //     }
+        // }
+        for (var i = 1; i <= 9; i++) {
+            var s = '';
+
+            for (var j = 1; j <= i; j++) {
+                s += j + '*' + i + '=' + (i * j) + '\t'
+            }
+            console.log(s);
+        }
+
+    </script>
+</body>
+
+</html>

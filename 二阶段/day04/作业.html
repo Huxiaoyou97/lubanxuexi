@@ -20,20 +20,20 @@
         // 判断闰年的方法
         // 1. 能被4整除并且不能被100整除
         // 2. 能被400整除
-        // const yearDom = document.getElementById("year")
-        // const textDom = document.getElementById("text")
-        // yearDom.oninput = function () {
-        //     let val = parseInt(yearDom.value)
+        const yearDom = document.getElementById("year")
+        const textDom = document.getElementById("text")
+        yearDom.oninput = function () {
+            let val = parseInt(yearDom.value)
 
 
-        //     if (val < 1000 || val > 3000) {
-        //         console.log("输入不合法")
-        //     } else if (val % 4 === 0 && val % 100 !== 0 || val % 400 === 0) {
-        //         console.log("闰年")
-        //     } else {
-        //         console.log("平年")
-        //     }
-        // }
+            if (val < 1000 || val > 3000) {
+                console.log("输入不合法")
+            } else if (val % 4 === 0 && val % 100 !== 0 || val % 400 === 0) {
+                console.log("闰年")
+            } else {
+                console.log("平年")
+            }
+        }
 
         // 作业二 打印1~100的和 和 乘积
         let a = 0, b = 1
