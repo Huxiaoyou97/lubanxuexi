@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>{{ message }}</h1>
+
+    <h1>{{ userinfo.username }} --- {{ userinfo.age }}</h1>
+
+    <h1>bool ---- {{ bool }}</h1>
+
+    <!-- 可以接收条件表达式 -->
+    <h1>{{ bool ? "我是true" : "我是false" }}</h1>
+
+    <!-- 绑定动态的值 不仅仅适用于title 任意属性都可以   -->
+    <h1 v-bind:title="message">{{ message }}</h1>
+    <!-- 简写 可以省略 v-bind -->
+    <h1 :title="userinfo.username">{{ message }}</h1>
+
+    <!-- 条件判断 -->
+    <div>
+        <!-- v-if接收的变量 必须为true 才会渲染该dom元素 -->
+        <h1 v-if="bool">v-if --- bool这个属性必须为true 我才 - <span style="color: red">渲染</span></h1>
+
+        <!-- v-show接收的变量 必须为true 才会显示该dom元素 -->
+        <h1 v-show="bool">v-show --- bool这个属性必须为true 我才 - <span style="color: red">显示</span></h1>
+
+        <!--
+            v-if 和 v-show的区别
+                v-if 如果值为false 则不会渲染该dom元素
+                v-show 则是利用了 display: none 的css属性来控制显示或者隐藏
+
+            两者的常用应用场景
+                v-if 通常作用在 切换不频繁的场景
+                v-show 通常作用在 需要频繁进行状态切换的场景
+        -->
+    </div>
+
+
+    <div>
+<!--        <ul>-->
+<!--            <li>{{ list[0] }}</li>-->
+<!--            <li>{{ list[1] }}</li>-->
+<!--            <li>{{ list[2] }}</li>-->
+<!--            <li>{{ list[3] }}</li>-->
+<!--            <li>{{ list[4] }}</li>-->
+<!--            <li>{{ list[5] }}</li>-->
+<!--        </ul>-->
+
+        <ul>
+            <!-- 循环数组 拿到每一项 -->
+            <li v-for="item in list">item: {{ item }}</li>
+
+            <!-- 循环数组 拿到每一项的值和下标 -->
+            <li v-for="(item, index) in list">item: {{ item }} ---- index: {{ index }}</li>
+        </ul>
+    </div>
+
+
+
+</div>
+
+<script src="../vue/index.js"></script>
+
+<script>
+const app = new Vue({
+    el: "#app",
+    data: {
+        message: "Hello Vue",
+        userinfo: {
+            username: "why",
+            age: 18
+        },
+        bool: false,
+
+        list: [1, 2, 3, 4, 5, 6]
+    }
+})
+</script>
+</body>
+</html>
