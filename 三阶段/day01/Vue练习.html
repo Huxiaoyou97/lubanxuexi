@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <h1>{{ message }}</h1>
+
+        <h1>{{ userinfo.name }}-----{{ userinfo.age }}</h1>
+
+        <h1>bool----{{ bool }}</h1>
+
+        <h1>{{ bool ? "我是ture" : "我是false" }}</h1>
+
+        <h1 v-bind:title="message">{{ message }}</h1>
+
+        <h1 :title="userinfo.name">{{ userinfo.name }}</h1>
+
+        <div>
+            <h1 v-if="bool">v-if----bool这个属性为ture我才<span style="color: red;">渲染</span></h1>
+    
+            <h1 v-show="bool">v-show-----bool这个属性为ture我才<span style="color:red ;">渲染</span></h1>
+        </div>
+    
+        
+        <div>
+            <ul>
+                <li v-for="item in list">item: {{ item }}</li>
+
+                <li v-for="(item, index) in list">item: {{ item }} -----index: {{ index }}</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src="../vue/index.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "hello Vue",
+                userinfo: {
+                    age: 18,
+                    name: "why"
+                },
+                bool: true,
+                list: [1, 2, 3, 4, 5, 6]
+            }
+        })
+    </script>
+</body>
+
+</html>
